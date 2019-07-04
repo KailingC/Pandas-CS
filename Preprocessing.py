@@ -7,3 +7,7 @@ df.columns = ['a', 'b']
 
 #2 filter based on a list
 df = df[df['subject_1'].isin([1, 2, 13, 18, 25])]
+
+
+#3 change the columns data type
+df[['FROM_TIME','TO_TIME']] = df[['FROM_TIME','TO_TIME']].apply(pd.to_datetime)
